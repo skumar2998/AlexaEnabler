@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LpR-Kt-GG5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="dhX-FH-WJL">
+            <objects>
+                <navigationController id="LpR-Kt-GG5" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mps-c6-1cb">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eb0-z8-EcY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b3h-Ho-rMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-678" y="133"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AlexaEnabler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AmazonAlexaLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="gMA-rQ-E4c">
+                                <rect key="frame" x="20" y="84" width="335" height="131"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="131" id="sSe-Ui-tac"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HowToGetSkillId.png" translatesAutoresizingMaskIntoConstraints="NO" id="AZh-O8-WMl">
+                                <rect key="frame" x="20" y="235" width="335" height="177"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="177" id="qH9-WZ-7Ho"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter above highlighted &quot;Skill ID&quot; below :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62v-j5-pHi">
+                                <rect key="frame" x="20" y="432" width="335" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="qLT-FX-dcM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wEK-os-HSY">
+                                <rect key="frame" x="20" y="463" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="59F-Wd-ZBM"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NR1-6A-jp4">
+                                <rect key="frame" x="100" y="523" width="175" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="knb-al-Pdz"/>
+                                </constraints>
+                                <state key="normal" title="Enable Skill" backgroundImage="buttonsBackground.png"/>
+                                <connections>
+                                    <action selector="enableButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D0L-1g-jqY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="62v-j5-pHi" secondAttribute="trailing" constant="20" id="3Yn-VQ-SNT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wEK-os-HSY" secondAttribute="trailing" constant="20" id="5E1-Md-WUn"/>
+                            <constraint firstItem="62v-j5-pHi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5oS-bw-WAp"/>
+                            <constraint firstItem="62v-j5-pHi" firstAttribute="top" secondItem="AZh-O8-WMl" secondAttribute="bottom" constant="20" id="9B6-t3-gAa"/>
+                            <constraint firstItem="wEK-os-HSY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ARM-T1-2O3"/>
+                            <constraint firstItem="NR1-6A-jp4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="Ecr-Bw-XfY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gMA-rQ-E4c" secondAttribute="trailing" constant="20" id="I6g-nV-Eh9"/>
+                            <constraint firstItem="gMA-rQ-E4c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KXY-UR-Q2m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AZh-O8-WMl" secondAttribute="trailing" constant="20" id="KvK-VC-FpA"/>
+                            <constraint firstItem="gMA-rQ-E4c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="L2x-cR-AGp"/>
+                            <constraint firstItem="wEK-os-HSY" firstAttribute="top" secondItem="62v-j5-pHi" secondAttribute="bottom" constant="10" id="WqN-rc-a23"/>
+                            <constraint firstItem="NR1-6A-jp4" firstAttribute="top" secondItem="wEK-os-HSY" secondAttribute="bottom" constant="30" id="ea0-Sq-3z3"/>
+                            <constraint firstItem="AZh-O8-WMl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ouy-gJ-ifb"/>
+                            <constraint firstItem="AZh-O8-WMl" firstAttribute="top" secondItem="gMA-rQ-E4c" secondAttribute="bottom" constant="20" id="qZh-Ul-IWY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NR1-6A-jp4" secondAttribute="trailing" constant="100" id="vkM-HH-fR7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wpM-r2-9ld"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="669.60000000000002" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AmazonAlexaLogo.png" width="900" height="600"/>
+        <image name="HowToGetSkillId.png" width="2152" height="1132"/>
+        <image name="buttonsBackground.png" width="600" height="200"/>
+    </resources>
+</document>
